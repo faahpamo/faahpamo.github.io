@@ -3,7 +3,7 @@ Discussing the implementation of the Data Access Object (DAO) Java EE Design Pat
 ## Table of Contents
 [Introduction](#todowebapp)
 
-[Technologies Used](#example-implementation)
+[Example Implementation](#example-implementation)
 
 [Conclusion](#conclusion)
 
