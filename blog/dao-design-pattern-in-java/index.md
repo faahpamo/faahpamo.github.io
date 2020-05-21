@@ -103,7 +103,7 @@ public class BooksDBTest {
 }
 ```
 Output: <br>
-![Output](/blog/images/BooksDBTest_Output_JDBC_DriverManager.png)
+![Output](images/BooksDBTest_Output_JDBC_DriverManager.png)
 
 
 Now, let's imagine the underlying database has changed from MySQL to Derby and then later to a file. We should then have to rewrite the whole code. In the above code, we are setting up the low level mechanisms (URL, credentials etc.) to ineract with the database. We can hide this. Database implementor should be able to configure the database without affecting the code.
@@ -140,7 +140,7 @@ The sequence diagram from the [Core J2EE design patterns](http://www.corej2eepat
 Because we are trying to use two databases - MySQL and Apache Derby, we shall implement [abstract factory design pattern](https://en.wikipedia.org/wiki/Abstract_factory_pattern). If we are using only one database instead, [factory pattern](https://en.wikipedia.org/wiki/Factory_method_pattern) can replace the abstract factory pattern. Our purpose is to use a factory object to create the required DAO and give it to us. Because we want futher abstraction while creating/obtaining the DAO object.  We don't want to specify the exact class of the DAO object that we want. It could be MySQLDAO or DerbyDAO. We don't want to get into those details. All we care about is the DAO object on which we can call the methods like DAO.getBook(int id) etc.
 
 Here's the class diagram for the application that we are developing:
-![Books database DAO class diagram](/blog/images/UML_Class_Diagram.png)
+![Books database DAO class diagram](images/UML_Class_Diagram.png)
 
 The UML class diagram is self-explaining. I've designed:
 1. a `DAOFactory` class implementing the abstract factory design pattern
@@ -177,7 +177,7 @@ public class DAOTest {
 }
 ```
 Output: <br>
-![DAOTest Output](/blog/images/DAOTest_Output_1.png)
+![DAOTest Output](images/DAOTest_Output_1.png)
 
 Notice that, I didn't create any DAO object for each database - MySQL and Derby. I have just interacted with the DAOFactory object and then the actual DAO implementation object returned by the factory. There were no database specific calls were made. There was no driver management, connection establishment and termination etc. The DAO object has hidden all such complexities.
 
