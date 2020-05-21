@@ -1,4 +1,4 @@
-# ToDo Web Application Using Java EE
+# ToDo List Web Application Using Java EE
 ## Table of Contents
 [Introduction](#introduction)
 
@@ -381,3 +381,4 @@ So, here's how our application looks like. I've kept the UI plain for simplicity
 
 ![Figure 13](images/ToDoWebAppUserProfile.png "Non-admin User Profile")
 
+Source code of the project is available on [GitHub](https://github.com/faimoh/todowebapp).
