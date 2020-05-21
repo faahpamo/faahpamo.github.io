@@ -89,6 +89,7 @@ Based on the requirements that we have collected so far, we understand that we h
 2. task
 
 Example data for few accounts:
+
 |Account ID|Username|First Name|Last Name|Password|Created At|Status|
 |---|---|---|---|---|---|---|
 |1|admin|Administrator|User|password|2020-05-06 17:34:04|enabled|
@@ -101,12 +102,14 @@ We see that account statuses are repeated throughout the table. So, as part of d
 After normalization, we shall have two tables - account_statuses and accounts:
 
 **ACCOUNT_STATUSES**
+
 |ID|Status|
 |---|---|
 |1|enabled|
 |2|disabled|
 
 **ACCOUNTS**
+
 |Account ID|Username|First Name|Last Name|Password|Status ID|
 |---|---|---|---|---|---|
 |1|admin|Administrator|User|password|1|
@@ -117,6 +120,7 @@ After normalization, we shall have two tables - account_statuses and accounts:
 Similarly, we shall have three tables for tasks - task_statuses, task_priorities and tasks: 
 
 **TASK_STATUSES**
+
 |ID|Status|
 |---|---|
 |1|todo|
@@ -124,6 +128,7 @@ Similarly, we shall have three tables for tasks - task_statuses, task_priorities
 |3|done|
 
 **TASK_PRIORITIES**
+
 |ID|Priority|
 |---|---|
 |1|important & urgent|
@@ -132,6 +137,7 @@ Similarly, we shall have three tables for tasks - task_statuses, task_priorities
 |4|not important and not urgent|
 
 **TASKS**
+
 |<sub>Task ID</sub>|<sub>Account ID</sub>|<sub>Details</sub>|<sub>Created At</sub>|<sub>Deadline</sub>|<sub>Last Updated</sub>|<sub>Status ID</sub>|<sub>Priority ID</sub>|
 |---|---|---|---|---|---|---|---|
 |<sub>1</sub>|<sub>2</sub>|<sub>Buy pencils.</sub>|<sub>2019-05-06 17:40:03</sub>|<sub>2019-05-07 17:40:03</sub>| |<sub>2|<sub>1|
@@ -140,6 +146,7 @@ Similarly, we shall have three tables for tasks - task_statuses, task_priorities
 Finally, we also have another requirement to store account session data. We shall store it as shown in below table:
 
 **ACCOUNT_SESSIONS**
+
 |Session ID|Account ID|Session Created|Session End|
 |---|---|---|---|
 |asd1gh|1|2019-05-06 17:40:03|2019-05-06 18:00:03|
@@ -302,6 +309,7 @@ The purpose of our controller servlet is to:
 ```
     
 The table below shows list of HTTP requests our application responds to and their associated action handlers:
+
 |User's Intended Action|HTTP Request URI|Action Handler|
 |---|---|---|
 |Submit empty login credentials|`GET /app/login`|LoginAction|
@@ -322,6 +330,7 @@ The table below shows list of HTTP requests our application responds to and thei
 
 ### Views
 The job of an action handler is to execute the business logic and choose an appropriate **View** component as a response to the request made by an user. The table below shows all action handlers and their view components:
+
 |Action Handler|View Component|
 |---|---|
 |LoginAction|`/WEB-INF/pages/admin/accounts/dashboard.jsp` <br> `/WEB-INF/pages/tasks/dashboard.jsp`|
