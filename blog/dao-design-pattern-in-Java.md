@@ -170,7 +170,7 @@ public class DAOTest {
 }
 ```
 Output: <br>
-![DAOTest Output](https://github.com/faimoh/dao-design-pattern/blob/master/images/DAOTest_Output_1.png)
+![DAOTest Output](https://github.com/faimoh/dao-design-pattern/images/DAOTest_Output_1.png)
 
 Notice that, I didn't create any DAO object for each database - MySQL and Derby. I have just interacted with the DAOFactory object and then the actual DAO implementation object returned by the factory. There were no database specific calls were made. There was no driver management, connection establishment and termination etc. The DAO object has hidden all such complexities.
 
