@@ -183,3 +183,5 @@ Notice that, I didn't create any DAO object for each database - MySQL and Derby.
 
 ## Conclusion
 DAO pattern essentially has helped me in easily migrating from one database to another. Further, it has removed the complex code that is written from all the business objects (Model) of a web application resulting in loosely coupled code. It has added an extra layer that hides the persistent storage mechanisms from database client code bringing in a centralized control. 
+
+Source code of the project is available on [GitHub](https://github.com/faimoh/dao-design-pattern)
