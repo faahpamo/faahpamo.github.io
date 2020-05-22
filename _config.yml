@@ -3,5 +3,8 @@ title: Faisal Ahmed Pasha Mohammed
 name: Faisal Ahmed Pasha Mohammed
 # Short bio or description (displayed in the header)
 description: Passionate about Java, Linux, RDBMS, TCP/IP, Mathematics
+footer-links:
+  github: faimoh
+  linkedin:
 exclude:
   - README.md
