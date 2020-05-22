@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 tags: "jekyll"
+excerpt: First Jekyll blog post.
 ---
 
 # Welcome
