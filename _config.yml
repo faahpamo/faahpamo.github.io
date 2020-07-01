@@ -5,7 +5,7 @@ name: Faisal Ahmed Pasha Mohammed
 description: Passionate about Java, Linux, RDBMS, TCP/IP, Mathematics
 logo: '/assets/logo.png'
 footer-links:
-  github: faimoh
+  github: faahpamo
   linkedin:
 exclude:
   - README.md
