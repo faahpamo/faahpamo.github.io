@@ -1,1 +1,2 @@
 ### MySQL - How to obtain last insert ID for an AUTO_INCREMENT column?
+MySQL function `LAST_INSERT_ID()` is connection specific. So, if some other query is inserting using the same connection, then `LAST_INSERT_ID()` would not give correct value. If you are a Java programmer like me, I suggest you to use `getGeneratedKeys()` method from the `Statement` object. Because it is `Statement` scoped, even if some other query happens using the same connection, the method would return the correct last insert ID.
