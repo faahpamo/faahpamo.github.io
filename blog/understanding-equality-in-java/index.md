@@ -38,7 +38,10 @@ Now that the equality operator `==` does not make sense for comparing object con
 
 Before we discuss the `equals(Object obj)` method, let’s first try to understand what we mean by object equality. Consider the below picture of multiple copies of the same book:
 
-![](images/1_xgWTuOuBcsB6LLyf6dmEMA.jpeg)
+<!--- ![](images/1_xgWTuOuBcsB6LLyf6dmEMA.jpeg) --->
+<p align="center">
+<img src="images/1_xgWTuOuBcsB6LLyf6dmEMA.jpeg" width="400" height="400">
+</p>
 
 Are all those books equal? Strictly speaking, no — because they are physically separate, individual copies — just like individual Java objects on the heap.
 
