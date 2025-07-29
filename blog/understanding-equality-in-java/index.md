@@ -1,5 +1,4 @@
 ##  Understanding Equality in Java: == vs equals() 
-Written on {{ page.date | date: "%B %e, %Y" }}
 
 ### 1. Introduction
 
