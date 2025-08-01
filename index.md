@@ -4,6 +4,7 @@ This is the GitHub page of Faisal Ahmed Pasha Mohammed. I'm passionate about IT 
     
 
 ### Articles
+  * <a href="blog/intercept-all-filter-java-servlet/"></a> <br />
   * <a href="blog/understanding-equality-in-java/">Understanding Equality in Java: == vs equals()</a> <br />
   * <a href="blog/todo-web-application-using-java-ee/">ToDo List Web Application Using Java EE</a>  [*<a href="https://github.com/faahpamo/todowebapp">Source Code</a>*] <br />
   * <a href="blog/dao-design-pattern-in-java/">DAO Design Pattern in Java</a> [*<a href="https://github.com/faahpamo/dao-design-pattern">Source Code</a>*] <br />
