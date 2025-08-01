@@ -244,6 +244,7 @@ To avoid static content being blocked by the filter, we need to explicitly allow
 * Make sure that the static content exists.
 * Add welcome file configuration in `web.xml`
 * Update the filter code to allow static resources
+
 ```java
 String uri = req.getRequestURI();          // e.g., /interceptallapp/index.html
 String ctx = req.getContextPath();         // e.g., /interceptallapp
