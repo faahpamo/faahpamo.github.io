@@ -22,13 +22,13 @@ Let's develop a simple web-app to see how a catch-all filter works. I'm using Ne
 
 Using NetBeans I've created a web application project and named it ``InterceptAllApp``. While creating the project I specified the context of the web-app as ``interceptallapp``. Thus, when we run the newly created web-app, it'll be available at ``http://localhost:8080/interceptallapp/``. When we run the web-app we shall see similar output like shown below:
 
-![](../../Desktop/images/1.png)
+![](images/1.png)
 
 That's the default ``index.html`` being served. So far so good. 
 
 Now, let's create a few resources as shown in the image below:
 
-![](../../Desktop/images/2.png)
+![](images/2.png)
 
 First, I've created four folders - `css`, `html`, `jsp`, and `images`. 
 
@@ -126,10 +126,11 @@ public void doFilter(ServletRequest request, ServletResponse response,
         response.getWriter().println("Your request to " + this.getFullURL(req) + " was blocked by /* Filter");
 }
 ```
+![](images/3.png)
 
 It didn’t work because even though we allowed `/`, Tomcat didn’t automatically map this to `index.html` unless it was explicitly declared in the `welcome-file-list`.
 
-![](../images/4.png)
+![](images/4.png)
 
 We can make it work by declaring the ``index.html`` as a welcome file in the ``web.xml`` as shown below:
 ```xml
@@ -148,7 +149,7 @@ We can make it work by declaring the ``index.html`` as a welcome file in the ``w
 
 This tells Tomcat to serve ``index.html`` when a user visits ``/interceptallapp/``. And it works now:
 
-![](../images/5.png)
+![](images/5.png)
 
 But, we see that logo and HTML styles are missing.
 
@@ -173,7 +174,7 @@ if (path.equals("/")|| path.endsWith(".png") || path.endsWith(".css")) {
 
 And that works, as shown below - ``logo.png`` and ``style.css`` were allowed:
 
-![](../images/6.png)
+![](images/6.png)
 
 ---
 
@@ -266,7 +267,7 @@ When a filter calls HttpServletResponse.sendRedirect() or otherwise commits the 
 
 In our example we wanted the JSP file ``secret.jsp`` remain only accessible after a successful login. So, we redirect the user to ``login.html`` page from the filter:
 
-![](../images/7.png)
+![](images/7.png)
 
 ```java
 public void doFilter(ServletRequest request, ServletResponse response,
