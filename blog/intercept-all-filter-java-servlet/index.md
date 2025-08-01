@@ -260,7 +260,6 @@ if (path.equals("/") ||
     chain.doFilter(request, response); // Let DefaultServlet handle it
     return;
 }
-
 ```
 
 When a filter calls HttpServletResponse.sendRedirect() or otherwise commits the response without invoking chain.doFilter(), the request processing stops at the filter, so the DefaultServlet never gets a chance to serve static resources.
